@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{E9AEA47A-C542-19A9-CC5E-A5CAE8DEF26C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/timeMechanics.cs">
     <Files>
       <File FileName="Assets/BayatGames/Free Platform Game Assets/Readme.txt" Line="1" Column="1" />
-      <File FileName="Assets/PlayerMovement.cs" Line="21" Column="34" />
+      <File FileName="Assets/ButtonManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/timeMechanics.cs" Line="14" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
