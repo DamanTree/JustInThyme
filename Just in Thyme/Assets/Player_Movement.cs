@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    private Rigidbody2D rb;
+
     public float speed;
     public float jumpForce;
     private float moveInput;
 
-    private Rigidbody2D rb;
-
-    private bool facingRight = true;
-
     private bool isGrounded;
     public Transform feetPos;
     public float checkRadius;
-    public LayerMask[] whatIsGround;
+    public LayerMask whatIsGround;
+
+    private float jumpTimeCounter;
+    public float jumpTime;
+    private bool isJumping;
 
     // Start is called before the first frame update
     void Start()
@@ -24,53 +26,42 @@ public class Player_Movement : MonoBehaviour
     }
 
     // Update is called once per frame
+    void FixedUpdate()
+    {
+        //Left+right movement
+        moveInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+    }
+
     void Update()
     {
-        isGrounded = false;
-        for (int i = 0; i < whatIsGround.Length; i++)
+        //Checks if player is on the ground
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        //Player can only jump when touching ground
+        if (isGrounded && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
-            if (Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround[i]))
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = Vector2.up * jumpForce;
+        }
+
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && isJumping)
+        {
+            if (jumpTimeCounter > 0)
             {
-                isGrounded = true;
-                //Debug.Log("Grounded");
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
             }
         }
 
-
-        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
-        moveInput = Input.GetAxis("Horizontal");
-        //Debug.Log(moveInput);
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-
-        if (facingRight == false && moveInput > 0)
+        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
         {
-            flip();
+            isJumping = false;
         }
-        else if (facingRight == true && moveInput < 0)
-        {
-            flip();
-        }
-
-        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
-        //(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            //Debug.Log("Hello");
-        }
-        else if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded == true)
-        //(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
-        {
-            //Debug.Log("hi");
-            rb.velocity = Vector2.up * jumpForce;
-        }
-    }
-
-    void flip()
-    {
-        facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
     }
 }
