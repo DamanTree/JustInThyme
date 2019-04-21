@@ -68,6 +68,8 @@
     <Compile Include="Assets\Low_Swordman\Demo\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Low_Swordman\Demo\Scripts\Swordman.cs" />
     <Compile Include="Assets\Player_Movement.cs" />
+    <Compile Include="Assets\Script\DisplayDirection.cs" />
+    <Compile Include="Assets\Script\DisplayWeeksNum.cs" />
     <Compile Include="Assets\Script\NPC.cs" />
     <Compile Include="Assets\Script\Tree.cs" />
     <Compile Include="Assets\timeMechanics.cs" />
