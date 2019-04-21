@@ -4,29 +4,73 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    public float speed;
+    public float jumpForce;
+    private float moveInput;
+
+    private Rigidbody2D rb;
+
+    private bool facingRight = true;
+
+    private bool isGrounded;
+    public Transform feetPos;
+    public float checkRadius;
+    public LayerMask[] whatIsGround;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        isGrounded = false;
+        for (int i = 0; i < whatIsGround.Length; i++)
         {
-            transform.Translate(-1, 0, 0);
+            if (Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround[i]))
+            {
+                isGrounded = true;
+                //Debug.Log("Grounded");
+            }
         }
-        if (Input.GetKeyDown(KeyCode.W)) 
-        {
-            transform.Translate(0, 1, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.D)) {
-            transform.Translate(1, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
 
+
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+        moveInput = Input.GetAxis("Horizontal");
+        //Debug.Log(moveInput);
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        if (facingRight == false && moveInput > 0)
+        {
+            flip();
         }
+        else if (facingRight == true && moveInput < 0)
+        {
+            flip();
+        }
+
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
+        //(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            //Debug.Log("Hello");
+        }
+        else if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded == true)
+        //(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
+        {
+            //Debug.Log("hi");
+            rb.velocity = Vector2.up * jumpForce;
+        }
+    }
+
+    void flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 }

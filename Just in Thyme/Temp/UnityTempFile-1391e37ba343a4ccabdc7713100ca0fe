@@ -80,9 +80,9 @@
 /reference:"Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll"
 /reference:"Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll"
 /reference:"/Applications/Unity/Hub/Editor/2019.1.0f2/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
-/reference:"/Users/DamanTree/Documents/GitHub/JustInThyme/Just in Thyme/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll"
-/reference:"/Users/DamanTree/Documents/GitHub/JustInThyme/Just in Thyme/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll"
-/reference:"/Users/DamanTree/Documents/GitHub/JustInThyme/Just in Thyme/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll"
+/reference:"/Users/lilianc/Documents/School Documents/GOA/JustInThyme/Just in Thyme/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll"
+/reference:"/Users/lilianc/Documents/School Documents/GOA/JustInThyme/Just in Thyme/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll"
+/reference:"/Users/lilianc/Documents/School Documents/GOA/JustInThyme/Just in Thyme/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll"
 /reference:"/Applications/Unity/Hub/Editor/2019.1.0f2/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"/Applications/Unity/Hub/Editor/2019.1.0f2/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"/Applications/Unity/Hub/Editor/2019.1.0f2/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
@@ -214,7 +214,6 @@
 /define:UNITY_2018_3_OR_NEWER
 /define:UNITY_2019_1_OR_NEWER
 /define:UNITY_INCLUDE_TESTS
-/define:UNITY_ANALYTICS
 /define:ENABLE_AUDIO
 /define:ENABLE_CACHING
 /define:ENABLE_CLOTH
@@ -295,3 +294,4 @@
 "Assets/Player_Movement.cs"
 "Assets/Script/NPC.cs"
 "Assets/Script/Tree.cs"
+"Assets/timeMechanics.cs"
