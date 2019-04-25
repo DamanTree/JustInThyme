@@ -71,6 +71,7 @@
     <Compile Include="Assets\Script\DisplayWeeksNum.cs" />
     <Compile Include="Assets\Script\NPC.cs" />
     <Compile Include="Assets\Script\Tree.cs" />
+    <Compile Include="Assets\Script\watch.cs" />
     <Compile Include="Assets\timeMechanics.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
