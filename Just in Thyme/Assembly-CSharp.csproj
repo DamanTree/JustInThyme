@@ -62,18 +62,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\Demo_GM.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\GroundSensor.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\Swordman.cs" />
-    <Compile Include="Assets\Player_Movement.cs" />
-    <Compile Include="Assets\Script\DisplayWeeksNum.cs" />
-    <Compile Include="Assets\Script\NPC.cs" />
-    <Compile Include="Assets\Script\Tree.cs" />
-    <Compile Include="Assets\Script\watch.cs" />
-    <Compile Include="Assets\timeMechanics.cs" />
-    <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
+    <Compile Include="Assets\Game Scene\script\NPC1.cs" />
+    <Compile Include="Assets\Game Scene\script\Objects.cs" />
+    <Compile Include="Assets\Game Scene\script\Player_Movement.cs" />
+    <Compile Include="Assets\Game Scene\script\watch.cs" />
+    <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\Demo_GM.cs" />
+    <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\GroundSensor.cs" />
+    <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\Swordman.cs" />
+    <Compile Include="Assets\Start Scene\script\scene.cs" />
+    <None Include="Assets\Package\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/kyluo/Desktop/Unity/Group Project/JustInThyme/Just in Thyme/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

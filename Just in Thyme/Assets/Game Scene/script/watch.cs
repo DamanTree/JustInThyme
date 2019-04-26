@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class watch : MonoBehaviour
 {
-    public Text changetext, currenttext;
+    public Text changetext, currenttextyear, currenttextweek;
     public Slider changeslider;
 
-    private int timer = 0;
+    private int year = 0, week = 0;
     private string season;
 
     void Start()
@@ -20,7 +20,18 @@ public class watch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (week >= 52)
+        {
+            year += 1;
+            week -= 52;
+        }
+        else if (week < 0)
+        {
+            year -= 1;
+            week = 52 + week;
+        }
+        currenttextweek.text = "week: " + week;
+        currenttextyear.text = "year: " + year;
     }
 
     public void changeupdate()
@@ -32,7 +43,14 @@ public class watch : MonoBehaviour
     public void futurepressed()
     {
         int temp = PlayerPrefs.GetInt("change");
-        timer += temp;
-        currenttext.text = timer + " week";
+        week += temp;
+        PlayerPrefs.SetInt("current", week);
+    }
+
+    public void backpressed()
+    {
+        int temp = PlayerPrefs.GetInt("change");
+        week -= temp;
+        PlayerPrefs.SetInt("current", week);
     }
 }
