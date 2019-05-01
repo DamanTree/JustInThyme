@@ -66,14 +66,17 @@
     <Compile Include="Assets\Game Scene\script\Objects.cs" />
     <Compile Include="Assets\Game Scene\script\Player_Movement.cs" />
     <Compile Include="Assets\Game Scene\script\watch.cs" />
+    <Compile Include="Assets\Package\Fonts\Script\scriptTexttest.cs" />
     <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\CameraController.cs" />
     <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\Demo_GM.cs" />
     <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\GroundSensor.cs" />
     <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Package\Low_Swordman\Demo\Scripts\Swordman.cs" />
     <Compile Include="Assets\Start Scene\script\scene.cs" />
+    <None Include="Assets\Package\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
+    <None Include="Assets\Package\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
     <None Include="Assets\Package\BayatGames\Free Platform Game Assets\Readme.txt" />
-    <None Include="Assets\FreePixelFood\ReadMe.txt" />
+    <None Include="Assets\Package\FreePixelFood\ReadMe.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/lilianc/Documents/School Documents/GOA/JustInThyme/Just in Thyme/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
