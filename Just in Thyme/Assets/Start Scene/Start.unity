@@ -389,9 +389,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'The villagers need some help!
 
-    Click the object you think that is what the villagers want and then slide the
-    slide bar to setup the time you want the object to travel.Then click the "future"
-    to travel to the future or "back" to travel back.'
+    Click the object that the villagers are referring to and use the slide bar to
+    setup the number of weeks you want the object to travel in time.Then, click the
+    "future" button to make the object travel to the future or the "back" button to
+    travel back in time.'
 --- !u!222 &332701243
 CanvasRenderer:
   m_ObjectHideFlags: 0
