@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class watch : MonoBehaviour
 {
-    public Text changetext, currenttextyear, currenttextweek;
+    public Text changetext, currenttextyear;
     public Slider changeslider;
 
-    private int year = 0, week = 0;
+    private int year = 0, week = 1, tempseason = 0;
     private string season;
 
     void Start()
@@ -20,18 +20,28 @@ public class watch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (week >= 52)
+        tempseason = PlayerPrefs.GetInt("current") % 52;
+        if (tempseason > 0 && tempseason <= 13)
         {
-            year += 1;
-            week -= 52;
+            season = "spring";
         }
-        else if (week < 0)
+        else if (tempseason > 13 && tempseason <= 26)
         {
-            year -= 1;
-            week = 52 + week;
+            season = "summer";
         }
-        currenttextweek.text = "week: " + week;
-        currenttextyear.text = "year: " + year;
+        else if (tempseason > 26 && tempseason <= 39)
+        {
+            season = "autumn";
+        }
+        else if (tempseason > 39 && tempseason <= 51)
+        {
+            season = "winter";
+        }
+        else if (tempseason == 0)
+        {
+            season = "winter";
+        }
+        currenttextyear.text = season;
     }
 
     public void changeupdate()
