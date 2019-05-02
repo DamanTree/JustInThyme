@@ -7670,14 +7670,14 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "\nWelcome to Spiceville! The town where things are named after various
     herbs and spices despite no apparent relation to them!\n\nThis is the story of
-    Oregano and his first steps of stepping into his late grandfather Paprika\u2019s
-    shoes. In his will, Paprika bequeathed to Oregano a pocket watch which he obtained
-    through one of his great adventures back in the day. The pocket watch is imbued
-    with special powers. It is capable of adjusting an object\u2019s time, that is,
-    making an object move forward or backward in time without affecting surrounding
-    objects. \n\nPaprika\u2019s great mission was to help the people of the world
-    with this pocket watch. However, now that he\u2019s passed, it is up to Oregano
-    to take up the mantle of Thyme, the friendly-neighborhood time-altering good samaritan.\n"
+    Oregano and his first steps into his late grandfather Paprika\u2019s shoes. In
+    his will, Paprika bequeathed to Oregano a pocket watch which he obtained through
+    one of his great adventures back in the day. The pocket watch is imbued with special
+    powers. It is capable of adjusting an object\u2019s time, that is, making an object
+    move forward or backward in time without affecting surrounding objects. \n\nPaprika\u2019s
+    great mission was to help the people of the world with this pocket watch. However,
+    now that he\u2019s passed, it is up to Oregano to take up the mantle of Thyme,
+    the friendly-neighborhood time-altering good samaritan.\n"
 --- !u!222 &1952897924
 CanvasRenderer:
   m_ObjectHideFlags: 0
